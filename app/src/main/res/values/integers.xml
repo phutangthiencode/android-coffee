@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--DÀnh cho smartphone -->
+<resources>
+    <integer name="column_of_gridview">2</integer>
+    <integer name="sizeOfImageBan_width">350</integer>
+    <integer name="sizeOfImageBan_height">350</integer>
+    <integer name="sizeImage_item_listview">150</integer>
+    <integer name="sizeImage_item_listview_large">250</integer>
+    <integer name="textsize_spinner">20</integer>
+    <integer name="sizeImage_itemSanPham_listView">120</integer>
+    <integer name="sizeOfAvatar">100</integer>
+    <integer name="layout_weight_listview_giohang">180</integer>
+</resources>

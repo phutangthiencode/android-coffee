@@ -1,0 +1,53 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="500dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.phutang.coffeemanager.dsBanTrong"
+    android:paddingBottom="@dimen/floatbtn_padding_bottom">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/img_banTrong_reload"
+        android:layout_width="50dp"
+        android:layout_gravity="center"
+        android:layout_height="match_parent"
+        android:src="@mipmap/reload"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="490dp">
+
+
+        <Spinner
+            android:background="@drawable/border_solid"
+            android:id="@+id/cbbKhuVucBanTrong"
+            android:textAlignment="center"
+            android:textSize="40dp"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"/>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/fragment_bantrong_swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <GridView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/gvBantrong"
+                android:numColumns="@integer/column_of_gridview"
+                android:gravity="center"
+                android:columnWidth="100dp"
+                android:stretchMode="columnWidth"></GridView>
+
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

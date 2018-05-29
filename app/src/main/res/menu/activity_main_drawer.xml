@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_main"
+        android:icon="@mipmap/icon_menu_home"
+        android:title="Home"
+        android:textColor="@color/white"
+        />
+
+    <item android:title="Chức năng">
+        @style/customTextColorMenu
+        <menu>
+            <item
+                android:id="@+id/menu_ds_tiepNhanBan"
+                android:icon="@mipmap/icon_menu_tiepnhanban"
+                android:title="Phục vụ bàn"
+                android:textColor="@color/white"
+                />
+            <item
+                android:id="@+id/menu_ds_daPhaChe"
+                android:icon="@mipmap/icon_menu_daphache"
+                android:title="Đã pha chế"
+                android:textColor="@color/white"
+                />
+        </menu>
+    </item>
+
+    <group android:checkableBehavior="single">
+
+
+    </group>
+
+
+    <item android:title="Khác" >
+        @android:color/white
+        <menu>
+            <item
+                android:id="@+id/menu_tanca"
+                android:icon="@mipmap/icon_menu_turnoff"
+                android:title="Tan ca" />
+            <item
+                android:id="@+id/menu_logout"
+                android:icon="@mipmap/icon_menu_logout"
+                android:title="Đăng xuất" />
+        </menu>
+    </item>
+
+</menu>

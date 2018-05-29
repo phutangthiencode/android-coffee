@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent" android:layout_height="fill_parent"       android:background="#ffffff">
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:hint="Nhập thêm ghi chú khi khách order"
+        android:id="@+id/nhapghichu_txtGhiChu"
+        android:paddingLeft="10dp"
+        android:lines="3" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <Button
+            android:id="@+id/nhapghichu_btnNhap"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:background="@color/background_info"
+            android:textColor="@color/white"
+            android:text="Nhập"
+            android:layout_weight="1"
+            />
+        <Button
+            android:id="@+id/nhapghichu_btnThoat"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:background="@color/gray"
+            android:textColor="@color/white"
+            android:text="Thoát"
+            android:layout_weight="1" />
+    </LinearLayout>
+</LinearLayout>

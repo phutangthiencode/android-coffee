@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_doi_cho"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.phutang.coffeemanager.doiCho"
+    tools:showIn="@layout/activity_doi_cho">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context="com.example.phutang.coffeemanager.dsBanTrong"
+        android:paddingBottom="@dimen/floatbtn_padding_bottom">
+
+        <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/doicho_imgReload"
+            android:layout_width="50dp"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:src="@mipmap/reload"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <Spinner
+                android:background="@drawable/border_solid"
+                android:id="@+id/doicho_cbbKhuVuc"
+                android:textAlignment="center"
+                android:textSize="40dp"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"/>
+
+            <GridView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/doicho_gvBanTrong"
+                android:numColumns="@integer/column_of_gridview"
+                android:gravity="center"
+                android:columnWidth="100dp"
+                android:stretchMode="columnWidth"></GridView>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_giohang_imgHinhDD"
+            android:padding="5dp"
+            />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="@dimen/widthOfTextviewGioHang"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/item_giohang_lbTenSP"
+                android:paddingLeft="10dp"
+                android:text="Cà phê sữa đá"
+                android:textColor="@color/black"
+                android:textSize="@dimen/fontsize_item_name"
+                android:layout_toRightOf="@+id/item_giohang_imgHinhDD"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/item_giohang_lbDonGia"
+                android:paddingLeft="10dp"
+                android:text="Giá: 12.000 VNĐ"
+                android:textSize="@dimen/fontsize_item_content"
+                android:textColor="@color/background_color"
+                android:layout_below="@+id/item_giohang_lbTenSP"
+                android:layout_toRightOf="@+id/item_giohang_imgHinhDD"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <Button
+                android:id="@+id/giohang_btnMinus"
+                android:background="@mipmap/icon_minus"
+                android:layout_width="@dimen/size_of_button_amount_cart"
+                android:layout_height="@dimen/size_of_button_amount_cart" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:id="@+id/item_giohang_lbSoLuong"
+                android:text="2"
+                android:textColor="@color/background_orange"
+                android:textSize="@dimen/fontsize_item_name"
+                android:layout_toRightOf="@+id/item_giohang_imgHinhDD"
+                />
+
+            <Button
+                android:id="@+id/giohang_btnAdd"
+                android:background="@mipmap/icon_plus"
+                android:layout_width="@dimen/size_of_button_amount_cart"
+                android:layout_height="@dimen/size_of_button_amount_cart" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

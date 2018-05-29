@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.phutang.coffeemanager">
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <!-- <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
+    <!-- <android:uses-permission android:name="android.permission.READ_PHONE_STATE" /> -->
+    <!-- <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> -->
+    <android:uses-permission android:name="android.permission.INTERNET" />
+    <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <android:uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_app"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NghiepVuBan"
+            android:label="@string/title_activity_nghiep_vu_ban"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".dsDaPhaChe"
+            android:label="@string/title_activity_ds_da_pha_che"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".chiTietDaPhaChe"
+            android:label="@string/title_activity_chi_tiet_da_pha_che"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".GoiMon"
+            android:allowBackup="true"
+            android:label="@string/title_activity_goi_mon"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".GioHang"
+            android:allowBackup="true"
+            android:label="@string/title_activity_gio_hang"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".doiCho"
+            android:label="@string/title_activity_doi_cho"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".PrepareData"
+            android:label="Cập nhật dữ liệu"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service
+            android:name=".Model.Entities.Business.ServiceThongBao"
+            android:stopWithTask="false" />
+
+        <activity
+            android:name=".MainKiemKho"
+            android:label="@string/title_activity_main_kiem_kho"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".dsLyThuyet"
+            android:label="@string/title_activity_ds_ly_thuyet"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".dsNguyenLieuKiemKho"
+            android:label="@string/title_activity_ds_nguyen_lieu_kiem_kho"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DoiChieuSoLuong"
+            android:label="@string/title_activity_doi_chieu_so_luong"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

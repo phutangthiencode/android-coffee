@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:title="Chức năng">
+        @style/customTextColorMenu
+        <menu>
+            <item
+                android:id="@+id/menu_kiemkho_kiemkho"
+                android:icon="@mipmap/icon_checkbox"
+                android:title="Kiểm kho"
+                android:textColor="@color/white"
+                />
+        </menu>
+    </item>
+
+
+
+    <item android:title="Khác" >
+        @android:color/white
+        <menu>
+            <item
+                android:id="@+id/menu_kiemkho_logout"
+                android:icon="@mipmap/icon_menu_logout"
+                android:title="Đăng xuất" />
+        </menu>
+    </item>
+
+</menu>

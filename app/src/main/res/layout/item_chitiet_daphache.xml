@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:id="@+id/item_ctdpc_imgSanPham"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Cà phê sữa đá"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_ctdpc_lbTenSP"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/fontsize_item_name" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_ctdpc_lbDonGia"
+            android:text="Giá: 12.000 VNĐ"
+            android:textSize="15dp"
+            android:textColor="@color/background_orange"
+            android:layout_below="@+id/item_giohang_lbTenSP"
+            android:layout_toRightOf="@+id/item_giohang_imgHinhDD"
+            />
+        <TextView
+            android:text="Số lượng: 3 (sp))"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/item_ctdpc_lbSoLuong"
+            android:textColor="@color/background_color"
+            android:textSize="15dp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

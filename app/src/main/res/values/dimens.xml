@@ -1,0 +1,24 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <!--Dành cho smartphone-->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="floatbtn_padding_bottom">70dp</dimen>
+    <dimen name="fontsize_item_name">20dp</dimen>
+    <dimen name="fontsize_item_content">15dp</dimen>
+    <dimen name="columnWidthGridViewBan">300dp</dimen>
+    <dimen name="sizeOfImageBan_width">300dp</dimen>
+    <dimen name="sizeOfImageBan_height">200dp</dimen>
+    <dimen name="widthOfTextviewGioHang">170dp</dimen>
+    <dimen name="marginTextWithImageGridview">-20dp</dimen>
+    <dimen name="fontsize_text_prepare">20dp</dimen>
+    <dimen name="margintop_viewinfo_itemban">350px</dimen>
+    <dimen name="height_of_background_content_ban">30dp</dimen>
+    <dimen name="size_of_button_amount_cart">30dp</dimen>
+
+</resources>

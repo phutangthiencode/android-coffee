@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    >
+
+    <ImageView
+        android:layout_width="@dimen/sizeOfImageBan_width"
+        android:layout_height="@dimen/sizeOfImageBan_height"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        android:id="@+id/item_sp_img_hinhDD"
+        android:src="@drawable/exp_ban_1" />
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="@dimen/margintop_viewinfo_itemban"
+        android:layout_height="wrap_content" >
+
+
+        <View
+            android:background="@color/backround_item_ban"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Cà phê sữa đá"
+                android:textSize="@dimen/fontsize_item_name"
+                android:textColor="@color/white"
+                android:id="@+id/item_sp_lbTenSP"
+                android:textStyle="bold"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Giá: 12000 VNĐ"
+                android:textAlignment="center"
+                android:textSize="@dimen/fontsize_item_content"
+                android:textColor="@color/white"
+                android:id="@+id/item_sp_lbDonGia"
+                android:layout_below="@+id/gridban_lb_tenBan"
+                android:layout_alignLeft="@+id/gridban_lb_tenBan"
+                android:layout_alignStart="@+id/gridban_lb_tenBan"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<resources>
+    <!--kích thước màn hình trên 7 inch Dành cho máy tính bảng-->
+    <dimen name="activity_horizontal_margin">64dp</dimen>
+    <dimen name="fontsize_item_name">25dp</dimen>
+    <dimen name="fontsize_item_content">20dp</dimen>
+    <dimen name="sizeOfImageBan_width">500dp</dimen>
+    <dimen name="sizeOfImageBan_height">350dp</dimen>
+    <dimen name="widthOfTextviewGioHang">560dp</dimen>
+    <dimen name="marginTextWithImageGridview">0dp</dimen>
+    <dimen name="fontsize_text_prepare">25dp</dimen>
+    <dimen name="height_of_background_content_ban">35dp</dimen>
+    <dimen name="margintop_viewinfo_itemban">290px</dimen>
+
+    <dimen name="size_of_button_amount_cart">40dp</dimen>
+</resources>

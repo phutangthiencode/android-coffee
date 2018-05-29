@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">CoffeeManager</string>
+    <string name="title_login">Đăng nhập</string>
+    <string name="login_hint_TenDangNhap">Tên đăng nhập</string>
+    <string name="login_hint_MatKhau">Mật khẩu</string>
+    <string name="login_btnLogin">Đăng nhập</string>
+    <string name="title_activity_main">Phục vụ</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_nghiep_vu_ban">Phục vụ bàn</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_ds_da_pha_che">Bàn đã pha chế</string>
+    <string name="title_activity_order">Order</string>
+    <string name="title_activity_chi_tiet_da_pha_che">Món cần giao</string>
+    <string name="title_activity_goi_mon">Gọi món</string>
+    <string name="title_activity_gio_hang">Giỏ hàng</string>
+    <string name="title_activity_doi_cho">Chọn bàn cần đổi</string>
+    <string name="title_activity_main_kiem_kho">Kiểm kho</string>
+    <string name="title_activity_ds_ly_thuyet">Danh sách tồn kho lý thuyết</string>
+    <string name="title_activity_ds_nguyen_lieu_kiem_kho">Nguyên liệu cần kiểm</string>
+    <string name="title_activity_doi_chieu_so_luong">Đối chiếu số lượng</string>
+
+
+</resources>

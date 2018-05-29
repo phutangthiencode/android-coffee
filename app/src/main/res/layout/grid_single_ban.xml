@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    >
+
+
+    <ImageView
+        android:layout_width="@dimen/sizeOfImageBan_width"
+        android:layout_height="@dimen/sizeOfImageBan_height"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        android:src="@drawable/exp_ban_1"
+        android:id="@+id/gridban_img_hinhDD"/>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="@dimen/margintop_viewinfo_itemban"
+        android:layout_height="wrap_content" >
+
+        <View
+            android:background="@color/backround_item_ban"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_of_background_content_ban"></View>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Bàn số 1"
+                android:textSize="@dimen/fontsize_item_name"
+                android:textColor="@color/white"
+                android:id="@+id/gridban_lb_tenBan"
+                android:textStyle="bold"
+                android:paddingLeft="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="- 4 chỗ"
+                android:textColor="@color/white"
+                android:textSize="@dimen/fontsize_item_name"
+                android:id="@+id/gridban_lb_sucChua"
+                android:layout_below="@+id/gridban_lb_tenBan"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

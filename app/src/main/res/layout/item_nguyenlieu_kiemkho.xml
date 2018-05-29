@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_nguyenlieukiem_imgHinh"
+            android:padding="5dp"
+            />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="@dimen/widthOfTextviewGioHang"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/item_nguyenlieukiem_lbTenNguyenLieu"
+                android:paddingLeft="10dp"
+                android:text="Cà phê nguyên chất"
+                android:textColor="@color/black"
+                android:textSize="@dimen/fontsize_item_name"
+                android:layout_toRightOf="@+id/item_nguyenlieukiem_imgHinh"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/item_nguyenlieukiem_lbDonViTinh"
+                android:paddingLeft="10dp"
+                android:text="Đơn vị kiểm kho: gam"
+                android:textSize="@dimen/fontsize_item_content"
+                android:textColor="@color/background_color"
+                android:layout_below="@+id/item_nguyenlieukiem_lbTenNguyenLieu"
+                android:layout_toRightOf="@+id/item_nguyenlieukiem_imgHinh"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <Button
+                android:id="@+id/item_nguyenlieukiem_btnNhapSoLuong"
+                android:background="@drawable/icon_input"
+                android:layout_width="55dp"
+                android:layout_height="55dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
