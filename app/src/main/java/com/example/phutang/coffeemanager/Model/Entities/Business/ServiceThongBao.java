@@ -11,6 +11,7 @@ import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Bundle;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.support.v7.app.NotificationCompat;
@@ -130,7 +131,10 @@ public class ServiceThongBao extends Service {
             this.notifyBuilder.setContentTitle("Quản lý cà phê");
             this.notifyBuilder.setContentText(ndThongBao);
             //-----------Tạo intent khi người dùng click vào thông báo sẽ khởi động lại ứng dụng
+            Bundle bdlTrangThai = new Bundle();
+            bdlTrangThai.putBoolean("trangThaiMo", true); //----Set trạng thái mở để xác định việc mở giao diện dsDaPhaChe trên thông báo.
             Intent intent = new Intent(this, dsDaPhaChe.class);
+            intent.putExtras(bdlTrangThai);
             PendingIntent pendingIntent = PendingIntent.getActivity(this, MY_REQUEST_CODE,
                     intent, PendingIntent.FLAG_UPDATE_CURRENT);
             this.notifyBuilder.setContentIntent(pendingIntent);

@@ -1,7 +1,7 @@
 package com.example.phutang.coffeemanager;
 
 import android.app.Activity;
-import android.content.Intent;
+import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -16,7 +16,9 @@ import android.widget.Toast;
 
 import com.example.phutang.coffeemanager.Model.Entities.Business.DbAccount;
 import com.example.phutang.coffeemanager.Model.Entities.Business.bGeneral;
+import com.example.phutang.coffeemanager.Model.Entities.Business.bLogin;
 import com.example.phutang.coffeemanager.Model.Entities.iTaiKhoan;
+
 
 public class Login extends Activity {
 
@@ -29,8 +31,9 @@ public class Login extends Activity {
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE); //Cấu hình không hiện title
         setContentView(R.layout.activity_login);
+        iTaiKhoan tkLite = bLogin.kiemTraDaDangNhap(getApplicationContext());
         //-----------Nếu thông tin đăng nhập chưa có trong sqlite
-        if(!this.layDangNhap()) {
+        if(tkLite.getTenDangNhap()==null) {
             Button btnLogin = (Button) findViewById(R.id.btnDangNhap);
             txtPass = (EditText) findViewById(R.id.txtMatKhau);
             txtUser = (EditText) findViewById(R.id.txtTenDangNhap);
@@ -59,6 +62,8 @@ public class Login extends Activity {
                 }
             });
         }
+        else
+            vaoProgressLayout(getApplicationContext(),tkLite.getTenDangNhap(), "", false);
 
     }
 
@@ -90,40 +95,16 @@ public class Login extends Activity {
 
     /**
      * Hàm xử lý vào layout chuẩn bị dữ liệu sau khi đăng nhập thành công
+     * @param context Context giao điện
      * @param tenDangNhap Tên đăng nhập để xác định thành viên, quyền hạn
      * @param matKhau Mật khẩu khi có yêu cầu lưu lại mật khẩu vào SQLite
      * @param luuLai Yêu cầu lưu lại SQlite
      */
-    private void vaoProgressLayout(String tenDangNhap, String matKhau, boolean luuLai){
-        Bundle bdlPrepare = new Bundle();
-        bdlPrepare.putString("tenDangNhap", tenDangNhap);
-        bdlPrepare.putString("matKhau", matKhau);
-        bdlPrepare.putBoolean("luuLai", luuLai);
-        Intent prepareClass = new Intent(getApplicationContext(), PrepareData.class);
-        prepareClass.putExtras(bdlPrepare);
-        startActivity(prepareClass);
+    private  void vaoProgressLayout(Context context, String tenDangNhap, String matKhau, boolean luuLai){
+        startActivity(bLogin.taoIntentVaoProgressLayout(context, tenDangNhap,  matKhau,  luuLai));
         finish();
     }
 
-    /**
-     * Hàm lấy thông tin đăng nhập được lưu trong SQLite
-     *
-     * @return
-     */
-    private boolean layDangNhap() {
-        try {
-            DbAccount dbSqlite = new DbAccount(getApplicationContext());
-            iTaiKhoan tkLite = dbSqlite.getInfoTaiKhoan();
-            //-----------Nếu thông tin tài khoản đã được lưu lại
-            if(tkLite.getTenDangNhap()!=null){
-                vaoProgressLayout(tkLite.getTenDangNhap(), "", false);
-                return true;
-            }
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-        return false;
-    }
 
 
     private class XuLyDangNhap extends AsyncTask<String, Void, Integer> {
@@ -156,7 +137,7 @@ public class Login extends Activity {
         protected void onPostExecute(Integer kq) {
             super.onPostExecute(kq);
             if (kq > 0) //------Đăng nhập thành công. Đã nhận được quyền hạn
-                vaoProgressLayout(txtUser.getText().toString(), txtPass.getText().toString(), cbRemind.isChecked());
+                vaoProgressLayout(getApplicationContext(), txtUser.getText().toString(), txtPass.getText().toString(), cbRemind.isChecked());
             else {
                 new DbAccount(getApplicationContext()).deleteTaiKhoan();
                 Toast.makeText(getApplicationContext(), "Đăng nhập thất bại, vui lòng thử lại", Toast.LENGTH_SHORT).show();

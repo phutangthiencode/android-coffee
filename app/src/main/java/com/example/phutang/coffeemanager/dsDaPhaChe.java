@@ -13,8 +13,10 @@ import android.widget.ListView;
 
 import com.example.phutang.coffeemanager.AdapterGrid.AdapterDaPhaChe;
 import com.example.phutang.coffeemanager.AppCode.xlChung;
+import com.example.phutang.coffeemanager.Model.Entities.Business.bLogin;
 import com.example.phutang.coffeemanager.Model.Entities.Business.bNghiepVuBan;
 import com.example.phutang.coffeemanager.Model.Entities.iHoaDonTam;
+import com.example.phutang.coffeemanager.Model.Entities.iTaiKhoan;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +29,7 @@ public class dsDaPhaChe extends AppCompatActivity {
     private FloatingActionButton fabReload;
     private static List<iHoaDonTam> listBanChoGiao;
     private static AdapterDaPhaChe adapter;
+    private static boolean trangThai=false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         try {
@@ -37,10 +40,15 @@ public class dsDaPhaChe extends AppCompatActivity {
             toolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                    finish();
+                  quayLaiGiaoDien();
                 }
             });
+
+            //---------Nhận dữ liệu truyền vào qua bundle
+            Bundle bdlTrangThai = this.getIntent().getExtras();
+            if(bdlTrangThai!=null)
+                trangThai = bdlTrangThai.getBoolean("trangThaiMo"); //------Lấy trạng thái được nhận vào
+
             this.khoiTaoDoiTuong();
 
             /**
@@ -50,8 +58,10 @@ public class dsDaPhaChe extends AppCompatActivity {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     int maBan = adapter.getItem(position).getMaBan();
+                    String tenBan = adapter.getItem(position).getBan().getTenBan();
                     Bundle bdlChiTiet = new Bundle();
                     bdlChiTiet.putInt("maBan", maBan);
+                    bdlChiTiet.putString("tenBan", tenBan);
                     Intent i = new Intent(getApplicationContext(), chiTietDaPhaChe.class);
                     i.putExtras(bdlChiTiet);
                     startActivity(i);
@@ -117,8 +127,27 @@ public class dsDaPhaChe extends AppCompatActivity {
      */
     @Override
     public void onBackPressed() {
-        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+        quayLaiGiaoDien();
+    }
+
+    /**
+     * Hàm quay lại giao diện trước
+     */
+    private void quayLaiGiaoDien(){
+        if(trangThai)
+            this.xuLyQuayLaiTuThongBao();
+        else
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
         finish();
+    }
+
+    /**
+     * Hàm xử lý quay lại khi người dùng click vào từ thông báo
+     */
+    private void xuLyQuayLaiTuThongBao(){
+        iTaiKhoan tkLogin = bLogin.kiemTraDaDangNhap(getApplicationContext());
+        if(tkLogin!=null)
+            startActivity(bLogin.taoIntentVaoProgressLayout(getApplicationContext(), tkLogin.getTenDangNhap(), tkLogin.getMatKhau(), false));
     }
 
     /**

@@ -42,6 +42,8 @@ public class chiTietDaPhaChe extends AppCompatActivity {
             setContentView(R.layout.activity_chi_tiet_da_pha_che);
             Toolbar toolbar = (Toolbar) findViewById(R.id.ct_daphache_toolbar);
             setSupportActionBar(toolbar);
+
+
             toolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -50,11 +52,13 @@ public class chiTietDaPhaChe extends AppCompatActivity {
             });
 
             //---------Nhận dữ liệu truyền vào qua bundle
-            Bundle bdlMaBan = this.getIntent().getExtras();
-            maBan = bdlMaBan.getInt("maBan");
+            Bundle bldBundle = this.getIntent().getExtras();
+            maBan = bldBundle.getInt("maBan");
+            String tenBan = bldBundle.getString("tenBan");
+
             if (maBan > 0) {
                 chuanBiDuLieu();
-
+                getSupportActionBar().setTitle("Phục vụ cho \""+tenBan+"\"");
                 fabGiao.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
